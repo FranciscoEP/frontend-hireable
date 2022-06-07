@@ -128,10 +128,12 @@ export function Form() {
                         </FormControl>
 
                         <FormControl>
-                            <FormLabel>Bachelor's Gpa</FormLabel>
+                            <FormLabel>Bachelor's score (0-5.0)</FormLabel>
                             <Input
+                                min={0}
+                                max={5}
                                 onChange={handleChange}
-                                placeholder="Bachelor's gpa"
+                                placeholder="Bachelor's score"
                                 bg="gray.100"
                                 border={0}
                                 color="gray.500"
@@ -144,10 +146,12 @@ export function Form() {
                             />
                         </FormControl>
                         <FormControl>
-                            <FormLabel>Master's Gpa</FormLabel>
+                            <FormLabel>Master's score (0-5.0)</FormLabel>
                             <Input
+                                min={0}
+                                max={5}
                                 onChange={handleChange}
-                                placeholder="Master's gpa"
+                                placeholder="Master's score"
                                 bg="gray.100"
                                 border={0}
                                 type="number"
@@ -160,8 +164,10 @@ export function Form() {
                             />
                         </FormControl>
                         <FormControl>
-                            <FormLabel>Tech test score</FormLabel>
+                            <FormLabel>Tech test score (0-100)</FormLabel>
                             <Input
+                                min={0}
+                                max={100}
                                 onChange={handleChange}
                                 placeholder="Test score"
                                 bg="gray.100"
