@@ -44,15 +44,18 @@ export function Form() {
             work_experience: formValues.work_experience === 'Yes' ? 1 : 0,
         };
         try {
-            const response = await fetch('http://localhost:8000/prediction', {
-                method: 'POST',
-                credentials: 'include',
-                mode: 'cors',
-                body: JSON.stringify(finalValues),
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            });
+            const response = await fetch(
+                'https://pacific-sands-65181.herokuapp.com/prediction',
+                {
+                    method: 'POST',
+                    credentials: 'include',
+                    mode: 'cors',
+                    body: JSON.stringify(finalValues),
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                }
+            );
 
             if (response.ok) {
                 const json = await response.json();
