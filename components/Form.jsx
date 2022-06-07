@@ -37,7 +37,7 @@ export function Form() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const finalValues = {
-            gender: formValues.gender === 'Male' ? 1 : 0,
+            gender: formValues.gender === 'Female' ? 1 : 0,
             bachelor_score: formValues.bachelor_score,
             master_score: formValues.master_score,
             experience_test: formValues.experience_test,
@@ -130,8 +130,9 @@ export function Form() {
                         <FormControl>
                             <FormLabel>Bachelor's score (0-5.0)</FormLabel>
                             <Input
-                                min={0}
-                                max={5}
+                                min={0.0}
+                                max={5.0}
+                                step={0.1}
                                 onChange={handleChange}
                                 placeholder="Bachelor's score"
                                 bg="gray.100"
@@ -150,6 +151,7 @@ export function Form() {
                             <Input
                                 min={0}
                                 max={5}
+                                step={0.1}
                                 onChange={handleChange}
                                 placeholder="Master's score"
                                 bg="gray.100"
@@ -168,6 +170,7 @@ export function Form() {
                             <Input
                                 min={0}
                                 max={100}
+                                step={1}
                                 onChange={handleChange}
                                 placeholder="Test score"
                                 bg="gray.100"
