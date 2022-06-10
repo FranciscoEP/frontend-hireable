@@ -84,7 +84,7 @@ export function Form() {
                 bg="gray.50"
                 rounded="xl"
                 p={{ base: 4, sm: 6, md: 8 }}
-                spacing={{ base: 8 }}
+                spacing={{ base: 10 }}
                 maxW={{ lg: 'lg' }}
             >
                 <Stack spacing={4}>
@@ -105,9 +105,11 @@ export function Form() {
                     </Heading>
                     <Text color="gray.500" fontSize={{ base: 'sm', sm: 'md' }}>
                         This model will help you to look through for the best
-                        applicants for a summer internship in Company Co. Please
-                        fill the following information and find out if the
-                        candidate will fit in our culture.
+                        applicants for a summer internship in Company Co.
+                    </Text>
+                    <Text color="gray.700" fontSize={{ base: 'sm', sm: 'md' }}>
+                        Please fill the following information to determine if
+                        the candidate will fit in our culture.
                     </Text>
                 </Stack>
                 <Box as="form" mt={10} onSubmit={handleSubmit}>
@@ -131,8 +133,9 @@ export function Form() {
                             </Select>
                         </FormControl>
 
-                        <FormControl>
-                            <FormLabel>Bachelor's score (0-5.0)</FormLabel>
+                        <FormControl font>
+                            <FormLabel>Bsc's gpa (0-5.0)</FormLabel>
+
                             <Input
                                 min={0.0}
                                 max={5.0}
@@ -151,7 +154,7 @@ export function Form() {
                             />
                         </FormControl>
                         <FormControl>
-                            <FormLabel>Master's score (0-5.0)</FormLabel>
+                            <FormLabel>Ms's gpa (0-5.0)</FormLabel>
                             <Input
                                 min={0}
                                 max={5}
@@ -170,7 +173,7 @@ export function Form() {
                             />
                         </FormControl>
                         <FormControl>
-                            <FormLabel>Tech test score (0-100)</FormLabel>
+                            <FormLabel>Tech score (0-100)</FormLabel>
                             <Input
                                 min={0}
                                 max={100}
@@ -191,7 +194,7 @@ export function Form() {
                     </Grid>
                     <FormControl mt="1rem">
                         <FormLabel>
-                            Applicant has previous experience?{' '}
+                            Applicant has any previous experience?
                         </FormLabel>
                         <Select
                             onChange={handleChange}

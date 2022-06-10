@@ -12,9 +12,9 @@ const Results = () => {
     return router?.asPath.includes('1') ? (
         <Message
             isHireable
-            heading="According to our model, the params given could put on track it
+            heading="Applicant could be hired"
+            paragraph="According to our model, the params given could put on track it
     for a further recognition interview."
-            paragraph="Applicant could be hired"
         />
     ) : (
         <Message

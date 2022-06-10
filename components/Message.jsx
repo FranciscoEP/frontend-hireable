@@ -47,7 +47,7 @@ const Message = ({ isHireable, heading, paragraph }) => {
                     boxShadow: 'xl',
                 }}
             >
-                Submit
+                Back
             </Button>
         </Box>
     );
