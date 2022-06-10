@@ -27,6 +27,8 @@ export function Form() {
         work_experience: 'Yes',
     });
 
+    const [loading, setLoading] = useState(false);
+
     const handleChange = (e) => {
         setFormValues((prevState) => ({
             ...prevState,
@@ -44,8 +46,9 @@ export function Form() {
             work_experience: formValues.work_experience === 'Yes' ? 1 : 0,
         };
         try {
+            setLoading(true);
             const response = await fetch(
-                'https://pacific-sands-65181.herokuapp.com/prediction',
+                `${process.env.NEXT_PUBLIC_BASE_URL}prediction`,
                 {
                     method: 'POST',
                     credentials: 'include',
@@ -63,7 +66,7 @@ export function Form() {
             }
             throw Error(`Request rejected with status ${response.status}`);
         } catch (error) {
-            // setLoading(false);
+            setLoading(false);
             // setPasswordError(true);
         }
     };
@@ -90,14 +93,15 @@ export function Form() {
                         lineHeight={1.1}
                         fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}
                     >
-                        Find the right candidate
+                        Find the{' '}
                         <Text
                             as="span"
                             bgGradient="linear(to-r, red.400,pink.400)"
                             bgClip="text"
                         >
-                            !
-                        </Text>
+                            right
+                        </Text>{' '}
+                        candidate!
                     </Heading>
                     <Text color="gray.500" fontSize={{ base: 'sm', sm: 'md' }}>
                         This model will help you to look through for the best
@@ -210,6 +214,7 @@ export function Form() {
                         fontFamily="heading"
                         mt={8}
                         w="full"
+                        isLoading={loading}
                         bgGradient="linear(to-r, red.400,pink.400)"
                         color="white"
                         _hover={{
