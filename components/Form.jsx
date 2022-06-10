@@ -173,7 +173,7 @@ export function Form() {
                             />
                         </FormControl>
                         <FormControl>
-                            <FormLabel>Tech-test (0-100)</FormLabel>
+                            <FormLabel>Test scr (0-100)</FormLabel>
                             <Input
                                 min={0}
                                 max={100}
