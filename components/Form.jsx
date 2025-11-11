@@ -81,48 +81,64 @@ export function Form() {
         >
             <Hero />
             <Stack
-                bg="gray.50"
+                bg="white"
                 rounded="xl"
                 p={{ base: 4, sm: 6, md: 8 }}
                 spacing={{ base: 8 }}
                 maxW={{ lg: 'lg' }}
+                boxShadow="xl"
+                border="1px"
+                borderColor="slate.200"
             >
                 <Stack spacing={4}>
                     <Heading
-                        color="gray.800"
+                        color="slate.800"
                         lineHeight={1.1}
                         fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}
                     >
                         Find the{' '}
                         <Text
                             as="span"
-                            bgGradient="linear(to-r, red.400,pink.400)"
+                            bgGradient="linear(to-r, coolBlue.500, cyan.500)"
                             bgClip="text"
                         >
                             right
                         </Text>{' '}
                         candidate!
                     </Heading>
-                    <Text color="gray.500" fontSize={{ base: 'sm', sm: 'md' }}>
+                    <Text color="slate.600" fontSize={{ base: 'sm', sm: 'md' }}>
                         This model will help you to look through for the best
                         applicants for a summer internship in Company Co.
                     </Text>
-                    <Text color="gray.700" fontSize={{ base: 'sm', sm: 'md' }}>
+                    <Text color="slate.700" fontSize={{ base: 'sm', sm: 'md' }}>
                         Please fill the following information to determine if
                         the candidate will fit in our culture.
                     </Text>
                 </Stack>
                 <Box as="form" mt={10} onSubmit={handleSubmit}>
-                    <Grid spacing={6} templateColumns="repeat(2, 1fr)" gap={6}>
+                    <Grid
+                        spacing={6}
+                        templateColumns={{
+                            base: 'repeat(1, 1fr)',
+                            md: 'repeat(2, 1fr)',
+                        }}
+                        gap={6}
+                    >
                         <FormControl>
                             <FormLabel> Gender </FormLabel>
                             <Select
                                 onChange={handleChange}
-                                bg="gray.100"
-                                border={0}
-                                color="gray.500"
+                                bg="slate.50"
+                                border="1px"
+                                borderColor="slate.300"
+                                color="slate.700"
                                 _placeholder={{
-                                    color: 'gray.500',
+                                    color: 'slate.400',
+                                }}
+                                _focus={{
+                                    borderColor: 'coolBlue.400',
+                                    boxShadow:
+                                        '0 0 0 1px var(--chakra-colors-coolBlue-400)',
                                 }}
                                 name="gender"
                                 value={formValues?.gender}
@@ -142,12 +158,18 @@ export function Form() {
                                 step={0.1}
                                 onChange={handleChange}
                                 placeholder="Bachelor's score"
-                                bg="gray.100"
-                                border={0}
-                                color="gray.500"
+                                bg="slate.50"
+                                border="1px"
+                                borderColor="slate.300"
+                                color="slate.700"
                                 type="number"
                                 _placeholder={{
-                                    color: 'gray.500',
+                                    color: 'slate.400',
+                                }}
+                                _focus={{
+                                    borderColor: 'coolBlue.400',
+                                    boxShadow:
+                                        '0 0 0 1px var(--chakra-colors-coolBlue-400)',
                                 }}
                                 name="bachelor_score"
                                 value={formValues?.bachelor_score}
@@ -161,12 +183,18 @@ export function Form() {
                                 step={0.1}
                                 onChange={handleChange}
                                 placeholder="Master's score"
-                                bg="gray.100"
-                                border={0}
+                                bg="slate.50"
+                                border="1px"
+                                borderColor="slate.300"
                                 type="number"
-                                color="gray.500"
+                                color="slate.700"
                                 _placeholder={{
-                                    color: 'gray.500',
+                                    color: 'slate.400',
+                                }}
+                                _focus={{
+                                    borderColor: 'coolBlue.400',
+                                    boxShadow:
+                                        '0 0 0 1px var(--chakra-colors-coolBlue-400)',
                                 }}
                                 name="master_score"
                                 value={formValues?.master_score}
@@ -180,12 +208,18 @@ export function Form() {
                                 step={1}
                                 onChange={handleChange}
                                 placeholder="Test score"
-                                bg="gray.100"
-                                border={0}
+                                bg="slate.50"
+                                border="1px"
+                                borderColor="slate.300"
                                 type="number"
-                                color="gray.500"
+                                color="slate.700"
                                 _placeholder={{
-                                    color: 'gray.500',
+                                    color: 'slate.400',
+                                }}
+                                _focus={{
+                                    borderColor: 'coolBlue.400',
+                                    boxShadow:
+                                        '0 0 0 1px var(--chakra-colors-coolBlue-400)',
                                 }}
                                 name="experience_test"
                                 value={formValues?.experience_test}
@@ -198,11 +232,17 @@ export function Form() {
                         </FormLabel>
                         <Select
                             onChange={handleChange}
-                            bg="gray.100"
-                            border={0}
-                            color="gray.500"
+                            bg="slate.50"
+                            border="1px"
+                            borderColor="slate.300"
+                            color="slate.700"
                             _placeholder={{
-                                color: 'gray.500',
+                                color: 'slate.400',
+                            }}
+                            _focus={{
+                                borderColor: 'coolBlue.400',
+                                boxShadow:
+                                    '0 0 0 1px var(--chakra-colors-coolBlue-400)',
                             }}
                             name="work_experience"
                             value={formValues?.work_experience}
@@ -218,12 +258,17 @@ export function Form() {
                         mt={8}
                         w="full"
                         isLoading={loading}
-                        bgGradient="linear(to-r, red.400,pink.400)"
+                        bgGradient="linear(to-r, coolBlue.500, cyan.500)"
                         color="white"
                         _hover={{
-                            bgGradient: 'linear(to-r, red.400,pink.400)',
+                            bgGradient: 'linear(to-r, coolBlue.600, cyan.600)',
                             boxShadow: 'xl',
+                            transform: 'translateY(-2px)',
                         }}
+                        _active={{
+                            transform: 'translateY(0)',
+                        }}
+                        transition="all 0.2s"
                     >
                         Submit
                     </Button>
