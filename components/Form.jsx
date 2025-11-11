@@ -116,7 +116,14 @@ export function Form() {
                     </Text>
                 </Stack>
                 <Box as="form" mt={10} onSubmit={handleSubmit}>
-                    <Grid spacing={6} templateColumns="repeat(2, 1fr)" gap={6}>
+                    <Grid
+                        spacing={6}
+                        templateColumns={{
+                            base: 'repeat(1, 1fr)',
+                            md: 'repeat(2, 1fr)',
+                        }}
+                        gap={6}
+                    >
                         <FormControl>
                             <FormLabel> Gender </FormLabel>
                             <Select
