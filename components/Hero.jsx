@@ -11,11 +11,12 @@ const Hero = () => (
                 md: '5xl',
                 lg: '6xl',
             }}
+            color="slate.800"
         >
             Candidates hiring app{' '}
             <Text
                 as="span"
-                bgGradient="linear(to-r, red.400,pink.400)"
+                bgGradient="linear(to-r, coolBlue.400, cyan.400)"
                 bgClip="text"
             >
                 by

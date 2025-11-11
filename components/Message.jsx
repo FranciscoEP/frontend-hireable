@@ -15,7 +15,7 @@ const Message = ({ isHireable, heading, paragraph }) => {
                         flexDirection="column"
                         justifyContent="center"
                         alignItems="center"
-                        bg="red.500"
+                        bg="steel.600"
                         rounded="50px"
                         w="55px"
                         h="55px"
@@ -25,12 +25,12 @@ const Message = ({ isHireable, heading, paragraph }) => {
                     </Flex>
                 </Box>
             ) : (
-                <CheckCircleIcon boxSize="50px" color="green.500" />
+                <CheckCircleIcon boxSize="50px" color="cyan.500" />
             )}
-            <Heading as="h2" size="xl" mt={6} mb={2}>
+            <Heading as="h2" size="xl" mt={6} mb={2} color="slate.800">
                 {heading}
             </Heading>
-            <Text color="gray.500">{paragraph}</Text>
+            <Text color="slate.600">{paragraph}</Text>
             <Button
                 isLoading={isLoading}
                 onClick={() => {
@@ -40,12 +40,17 @@ const Message = ({ isHireable, heading, paragraph }) => {
                 fontFamily="heading"
                 mt={8}
                 w="8rem"
-                bgGradient="linear(to-r, red.400,pink.400)"
+                bgGradient="linear(to-r, coolBlue.500, cyan.500)"
                 color="white"
                 _hover={{
-                    bgGradient: 'linear(to-r, red.400,pink.400)',
+                    bgGradient: 'linear(to-r, coolBlue.600, cyan.600)',
                     boxShadow: 'xl',
+                    transform: 'translateY(-2px)',
                 }}
+                _active={{
+                    transform: 'translateY(0)',
+                }}
+                transition="all 0.2s"
             >
                 Back
             </Button>
