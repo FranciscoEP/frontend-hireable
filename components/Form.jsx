@@ -130,7 +130,8 @@ export function Form() {
                                 }}
                                 _focus={{
                                     borderColor: 'coolBlue.400',
-                                    boxShadow: '0 0 0 1px var(--chakra-colors-coolBlue-400)',
+                                    boxShadow:
+                                        '0 0 0 1px var(--chakra-colors-coolBlue-400)',
                                 }}
                                 name="gender"
                                 value={formValues?.gender}
@@ -160,7 +161,8 @@ export function Form() {
                                 }}
                                 _focus={{
                                     borderColor: 'coolBlue.400',
-                                    boxShadow: '0 0 0 1px var(--chakra-colors-coolBlue-400)',
+                                    boxShadow:
+                                        '0 0 0 1px var(--chakra-colors-coolBlue-400)',
                                 }}
                                 name="bachelor_score"
                                 value={formValues?.bachelor_score}
@@ -184,7 +186,8 @@ export function Form() {
                                 }}
                                 _focus={{
                                     borderColor: 'coolBlue.400',
-                                    boxShadow: '0 0 0 1px var(--chakra-colors-coolBlue-400)',
+                                    boxShadow:
+                                        '0 0 0 1px var(--chakra-colors-coolBlue-400)',
                                 }}
                                 name="master_score"
                                 value={formValues?.master_score}
@@ -208,7 +211,8 @@ export function Form() {
                                 }}
                                 _focus={{
                                     borderColor: 'coolBlue.400',
-                                    boxShadow: '0 0 0 1px var(--chakra-colors-coolBlue-400)',
+                                    boxShadow:
+                                        '0 0 0 1px var(--chakra-colors-coolBlue-400)',
                                 }}
                                 name="experience_test"
                                 value={formValues?.experience_test}
@@ -230,7 +234,8 @@ export function Form() {
                             }}
                             _focus={{
                                 borderColor: 'coolBlue.400',
-                                boxShadow: '0 0 0 1px var(--chakra-colors-coolBlue-400)',
+                                boxShadow:
+                                    '0 0 0 1px var(--chakra-colors-coolBlue-400)',
                             }}
                             name="work_experience"
                             value={formValues?.work_experience}
